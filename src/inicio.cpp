@@ -109,7 +109,7 @@ bool Inicio::loadDict() {
     } catch(exception e)    {
         return false;
     }
-    #ifdef DEBUG
+    #ifdef DEBUG2
         for(map<string,int>::iterator it=mapWords.begin(); it!=mapWords.end(); it++)    
             cout << it->first << ' ' << it->second << '\n';
     #endif

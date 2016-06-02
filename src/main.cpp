@@ -14,6 +14,6 @@ int main()  {
     teste.writeTransitions();
 
     Viterbi v;
-    v.viterbi(teste, "a");
+    v.viterbi(teste, "steve");
     return 0;
 }

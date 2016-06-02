@@ -8,6 +8,8 @@
 #include <map>
 #include <utility>
 
+#define DEBUG
+
 using std::exception;
 using std::string;
 using std::map;
