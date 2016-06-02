@@ -1,5 +1,6 @@
 #include <iostream>
 #include "inicio.hh"
+#include "viterbi.hh"
 
 using namespace std;
 
@@ -11,5 +12,8 @@ int main()  {
     teste.readFile();
     teste.writeDict();
     teste.writeTransitions();
+
+    Viterbi v;
+    v.viterbi(teste, "a");
     return 0;
 }

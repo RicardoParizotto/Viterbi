@@ -92,9 +92,6 @@ bool Inicio::writeTransitions()   {
     return true;
 }
 
-#include <iostream>
-using std::cout;
-
 bool Inicio::loadDict() {
     if(!fileExists(DICT_FILE))
         return false;
@@ -112,9 +109,10 @@ bool Inicio::loadDict() {
     } catch(exception e)    {
         return false;
     }
-    for(map<string,int>::iterator it=mapWords.begin(); it!=mapWords.end(); it++)    
-        cout << it->first << ' ' << it->second << '\n';
-
+    #ifdef DEBUG
+        for(map<string,int>::iterator it=mapWords.begin(); it!=mapWords.end(); it++)    
+            cout << it->first << ' ' << it->second << '\n';
+    #endif
     return true;
 }
 
