@@ -2,8 +2,7 @@
 #include "inicio.hh"
 
 
-			
-
+		
 /*
 * implementação da função de viterbi
 */
