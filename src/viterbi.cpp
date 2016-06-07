@@ -17,10 +17,11 @@ char lcase(char a) {
     return a;
 }
 
-void Viterbi::viterbi( Inicio &ini, char * word){
+char maxword[256];
+char *Viterbi::viterbi( Inicio &ini, char * word) {
     int k;
     double pa[27];
-    char maxword[256];
+    //char maxword[256];
     int mex;
 
     for ( k = 0; k < 27; k++ ) pa[k] = ini.transition[26][k];
@@ -47,7 +48,9 @@ void Viterbi::viterbi( Inicio &ini, char * word){
     }
     maxword[k] = '\0';
 
-    printf("%s\n", maxword);
+    //printf("%s >> Viterbi\n", maxword);
+
+    return maxword;
 }
 
 

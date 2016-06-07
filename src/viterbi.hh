@@ -10,5 +10,5 @@ class Viterbi	{
     double ps[27][27];		//probabilidades auxiliares
 
 public:
-    void viterbi( Inicio &, char * );
+    char *viterbi( Inicio &ini, char * word);
 };

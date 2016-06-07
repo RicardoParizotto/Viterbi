@@ -19,7 +19,6 @@ using std::ofstream;
 
 class Inicio    {
     const char * fileName;
-    map<string, int> mapWords;
     static const int BUF_LEN = 500000;
     static const int WORD_LEN = 256;
     static const char * DICT_FILE;
@@ -27,6 +26,7 @@ class Inicio    {
     int sum;
 
 public: 
+    map<string, int> mapWords;
     Inicio(const char * fName): fileName(fName) {};
 
     double transition[27][27];
@@ -37,7 +37,7 @@ public:
     inline bool fileExists(const char * fName) { return access(fName, F_OK) != EOF; };
 
     bool readFile();
-    void wordCount(char *);    
+    void wordCount(char *);   
 
     bool writeDict();
     bool writeTransitions();
