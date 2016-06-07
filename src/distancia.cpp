@@ -17,7 +17,7 @@ Adaptado de:
 #include <iostream>
 using namespace std;
  
-int LevenshteinDistance(const std::string &s1, const std::string &s2) {
+int distance(const std::string &s1, const std::string &s2) {
   	const int m(s1.size());
 	const int n(s2.size());
 
