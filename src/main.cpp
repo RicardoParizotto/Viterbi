@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main()  {
+int main(int argc, char ** argv)  {
     Inicio teste("input/steve_jobs.txt");
     
     teste.loadDict();
@@ -13,7 +13,9 @@ int main()  {
     teste.writeDict();
     teste.writeTransitions();
 
-    Viterbi v;
-    v.viterbi(teste, "steva");
+    for(int i = 1; i < argc; i++)    {
+        Viterbi v;
+        v.viterbi(teste, argv[i]);
+    }
     return 0;
 }
