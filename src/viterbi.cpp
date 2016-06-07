@@ -11,6 +11,11 @@
 #include "viterbi.hh"
 #include <cstdio>
 
+char lcase(char a) {
+    if (a >= 'A' && a <= 'Z')
+        return a+32;
+    return a;
+}
 
 void Viterbi::viterbi( Inicio &ini, char * word){
     int k;
@@ -21,10 +26,11 @@ void Viterbi::viterbi( Inicio &ini, char * word){
     for ( k = 0; k < 27; k++ ) pa[k] = ini.transition[26][k];
 
     for ( k = 0; word[k] != '\0'; k++ ){
+        char c = lcase(word[k]);
         for ( int i = 0; i < 27; i++ ){
             double max = 0;
             for ( int j = 0; j < 27; j++){
-                ps[i][j] = pa[posMtr(word[k])]*ini.transition[posMtr(word[k])][i]*probTecla[i][posMtr(word[k])];
+                ps[i][j] = pa[posMtr(c)]*ini.transition[posMtr(c)][i]*probTecla[i][posMtr(c)];
                 max = (max < ps[i][j])? ps[i][j]:max;            
             }
             pa[i] = max;
