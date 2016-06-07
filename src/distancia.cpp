@@ -2,7 +2,7 @@
  * @Autores:     Rafael Hengen Ribeiro, Regis Thiago Feyh, Ricardo Parizotto *
  * @Matrículas:  1311100016,            1311100012,        1311100007        *
  * @E-mails:     rafaelhr.ribeiro@gmail.com, registhiagofeyh@gmail.com       *
- *               ricardo.dparizotto                                          *
+ *               ricardo.dparizotto@gmail.com                                *
  * --------------------------------------------------------------------------*
  * Cálculo de distância de edição de palavras                                *
  * --------------------------------------------------------------------------*/
