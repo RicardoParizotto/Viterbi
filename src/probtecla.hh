@@ -2,11 +2,11 @@
  * @Autores:     Rafael Hengen Ribeiro, Regis Thiago Feyh, Ricardo Parizotto *
  * @Matrículas:  1311100016,            1311100012,        1311100007        *
  * @E-mails:     rafaelhr.ribeiro@gmail.com, registhiagofeyh@gmail.com       *
- *               ricardo.dparizotto                                          *
+ *               ricardo.dparizotto@gmail.com                                *
  * --------------------------------------------------------------------------*
  * Matriz de probabilidade das teclas do teclado                             *
  * --------------------------------------------------------------------------*/
-#define _OK 0.9000
+#define _OK 0.9623
 #define ER1 0.0250
 #define ER2 0.0100
 #define ER3 0.0020
@@ -25,7 +25,7 @@
  *   getProbTecla(char a, char b).
  **************************************************************************/
 static const double probTecla[27][27] = {
-//    a    b    c    d    e    f    g    h    i    j    k    l    m    n    o    p    q    r    s    t    u    v    w    x    y    z
+//    a    b    c    d    e    f    g    h    i    j    k    l    m    n    o    p    q    r    s    t    u    v    w    x    y    z    ' '
     {_OK, ER4, ER4, ER3, ER3, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER4, ER1, ER4, ER4, ER4, ER2, ER3, ER4, ER1, ER4}, // a
     {ER4, _OK, ER4, ER4, ER4, ER4, ER1, ER1, ER4, ER4, ER4, ER4, ER4, ER1, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER4, ER4, ER4, ER4, ER1}, // b
     {ER4, ER4, _OK, ER1, ER4, ER1, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER4, ER1, ER4, ER4, ER1}, // c
@@ -52,7 +52,7 @@ static const double probTecla[27][27] = {
     {ER2, ER4, ER1, ER1, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER4, ER4, ER4, ER4, _OK, ER4, ER1, ER4}, // x
     {ER4, ER4, ER4, ER4, ER4, ER4, ER2, ER1, ER3, ER2, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER1, ER4, ER4, ER4, _OK, ER4, ER4}, // y
     {ER1, ER4, ER2, ER3, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER4, ER4, ER4, ER4, ER1, ER4, _OK, ER4}, // z
-    {ER4, ER1, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER1, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER4, ER4, ER4, ER4, _OK}  // z
+    {ER4, ER1, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER1, ER4, ER4, ER4, ER4, ER4, ER4, ER4, ER1, ER4, ER4, ER4, ER4, _OK}  // ' '
 };
 
 // Converte char para um inteiro indexado de 0 à 26;

@@ -37,13 +37,15 @@ public:
     inline bool fileExists(const char * fName) { return access(fName, F_OK) != EOF; };
 
     bool readFile();
-    void wordCount(char *);
-    
+    void wordCount(char *);    
+
     bool writeDict();
     bool writeTransitions();
 
     bool loadDict();
     bool loadTransitions();
+
+    bool dic(string word){ return mapWords.find(word) != mapWords.end();}
 };
 
 #endif
