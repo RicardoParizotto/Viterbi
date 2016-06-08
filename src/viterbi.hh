@@ -1,3 +1,7 @@
+#ifndef VITERBI_INCLUDED
+#define VITERBI_INCLUDED
+
+
 #include "probtecla.hh"
 #include "inicio.hh"
 
@@ -12,3 +16,5 @@ class Viterbi	{
 public:
     char *viterbi( Inicio &ini, char * word);
 };
+
+#endif
