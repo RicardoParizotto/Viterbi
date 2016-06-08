@@ -59,12 +59,16 @@ int Distancia::distance(const std::string &s1, const std::string &s2) {
 
 void Distancia::menorDistancia(Inicio &ini, char *word) {
     int min = 100;
-    mit menor;
+    mit menor = ini.mapWords.end();
     for (mit i = ini.mapWords.begin(); i != ini.mapWords.end(); i++) {
         int d = distance(word, i->first);
         if (d < min) {
             min = d;
             menor = i;
+        } else if (d == min) {
+            if (menor != ini.mapWords.end() && i->second > menor->second) {
+                menor = i;
+            }
         }
     }
 
