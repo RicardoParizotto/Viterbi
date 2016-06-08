@@ -1,0 +1,17 @@
+Implementação do algoritmo de Viterbi para correção ortográfica.
+Autores:Rafael Hengen Ribeiro, Regis Thiago Feyh, Ricardo Parizotto 
+Matrículas:  1311100016,            1311100012,        1311100007
+E-mails:     rafaelhr.ribeiro@gmail.com, registhiagofeyh@gmail.com, ricardo.dparizotto@gmail.com
+
+1. Compilação
+Para compilar basta executar o comando make no diretório do programa.
+O executável gerado ficará na pasta bin/ e terá o nome de viterbi.
+
+2. Execução
+Para executar o programa deve-se passar as palavras a serem corrigidas como parametro (sem aspas).
+2.1. Formato:
+    bin/viterbi palavra_1 palavra_2 ... palavra_n
+2.2. Exemplo:
+Para executar o algoritmo de viterbi para as palavras "zxha" e "algk", a execução é dada abaixo:
+    bin/viterbi zxha algk
+

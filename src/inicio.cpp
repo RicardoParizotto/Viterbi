@@ -1,3 +1,12 @@
+/* ***************************************************************************
+ * @Autores:     Rafael Hengen Ribeiro, Regis Thiago Feyh, Ricardo Parizotto *
+ * @Matrículas:  1311100016,            1311100012,        1311100007        *
+ * @E-mails:     rafaelhr.ribeiro@gmail.com, registhiagofeyh@gmail.com       *
+ *               ricardo.dparizotto@gmail.com                                *
+ * --------------------------------------------------------------------------*
+ * Cálculo da probabilidade de transição e geração do arquivo de dicionário  *
+ * --------------------------------------------------------------------------*/
+
 #include "inicio.hh"
 
 const char * Inicio::DICT_FILE = "dict.txt";
@@ -14,9 +23,9 @@ void Inicio::wordCount(char* str)    {
         for(int j = 0; j < 27; j++)
             transition[i][j] = 0;
 
-    while(ptr != NULL && valid(*ptr)) { 
+    while(ptr != NULL && valid(*ptr)) {
         transition[posMtr(ant)][posMtr(*ptr)]+=1.0;
-        ant = *ptr;   
+        ant = *ptr;
         sum++;
 
         if(*ptr != ' ')
@@ -45,7 +54,7 @@ bool Inicio::readFile()    {
     try {
         if(loadDict() && loadTransitions())
             return true;
-        
+
         inputFile.open(fileName, ifstream::in);
 
         if(inputFile.good()) {
@@ -64,7 +73,7 @@ bool Inicio::writeDict()    {
     try {
         fout.open(DICT_FILE,ofstream::out);
 
-        for(map<string,int>::iterator it=mapWords.begin(); it!=mapWords.end(); it++)    
+        for(map<string,int>::iterator it=mapWords.begin(); it!=mapWords.end(); it++)
             fout << it->first << ' ' << it->second << '\n';
 
         fout.close();
@@ -82,13 +91,13 @@ bool Inicio::writeTransitions()   {
 
         fout.precision(15);
 
-        for(int i = 0; i < 27; i++) 
-            for(int j = 0; j < 27; j++) 
+        for(int i = 0; i < 27; i++)
+            for(int j = 0; j < 27; j++)
                 fout << mapMtr(i) << ' ' << mapMtr(j) << ' ' << (double)transition[i][j] << '\n';
     }
     catch(exception e)  {
         return false;
-    }        
+    }
     return true;
 }
 
@@ -110,7 +119,7 @@ bool Inicio::loadDict() {
         return false;
     }
     #ifdef DEBUG2
-        for(map<string,int>::iterator it=mapWords.begin(); it!=mapWords.end(); it++)    
+        for(map<string,int>::iterator it=mapWords.begin(); it!=mapWords.end(); it++)
             cout << it->first << ' ' << it->second << '\n';
     #endif
     return true;
