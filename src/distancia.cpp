@@ -68,8 +68,6 @@ void Distancia::menorDistancia(Inicio &ini, char *word) {
         }
     }
 
-    cout << menor->first + " >> menor distancia " + "\n";
-
     Viterbi b;
     char *c = b.viterbi(ini, word);
 
